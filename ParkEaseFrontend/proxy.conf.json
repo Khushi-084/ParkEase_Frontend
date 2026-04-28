@@ -1,0 +1,64 @@
+{
+  "/auth": {
+    "target": "http://127.0.0.1:5201",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/auth": ""
+    }
+  },
+  "/parking": {
+    "target": "http://127.0.0.1:5202",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/parking": ""
+    }
+  },
+  "/slot": {
+    "target": "http://127.0.0.1:5203",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/slot": ""
+    }
+  },
+  "/booking": {
+    "target": "http://127.0.0.1:5204",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/booking": ""
+    }
+  },
+  "/ticket": {
+    "target": "http://127.0.0.1:5205",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/ticket": ""
+    }
+  },
+  "/payment": {
+    "target": "http://127.0.0.1:5206",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/payment": ""
+    }
+  },
+  "/notification": {
+    "target": "http://127.0.0.1:5000",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/notification": ""
+    }
+  },
+  "/notificationHub": {
+    "target": "http://127.0.0.1:5000",
+    "secure": false,
+    "changeOrigin": true,
+    "ws": true
+  }
+}
