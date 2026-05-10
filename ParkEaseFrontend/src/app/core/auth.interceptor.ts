@@ -6,15 +6,14 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authStore = inject(AuthStore);
   const token = authStore.token();
 
-  if (!token) {
-    return next(req);
-  }
+  // THIS IS YOUR GATEWAY URL
+  const baseUrl = 'https://parkease-api-gateway-47ib.onrender.com';
 
-  return next(
-    req.clone({
-      setHeaders: {
-        Authorization: `Bearer ${token}`,
-      },
-    }),
-  );
+  // Clone the request and add the Base URL + Authorization header
+  const apiReq = req.clone({
+    url: `${baseUrl}${req.url}`,
+    setHeaders: token ? { Authorization: `Bearer ${token}` } : {}
+  });
+
+  return next(apiReq);
 };
